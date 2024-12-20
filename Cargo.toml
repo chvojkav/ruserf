@@ -1,9 +1,5 @@
 [workspace]
-members = [
-  "core",
-  "ruserf",
-  "types"
-]
+members = ["core", "ruserf", "types"]
 resolver = "2"
 
 [workspace.package]
@@ -25,18 +21,18 @@ futures = { version = "0.3", default-features = false }
 serde = { version = "1", features = ["derive"] }
 humantime-serde = "1"
 indexmap = "2"
-memberlist-types = { version = "0.2", default-features = false }
-memberlist-core = { version = "0.2", default-features = false }
-memberlist = { version = "0.2", default-features = false }
+# memberlist-types = { version = "0.2", default-features = false }
+# memberlist-core = { version = "0.2", default-features = false }
+# memberlist = { version = "0.2", default-features = false }
 thiserror = "1"
 viewit = "0.1.5"
 smol_str = "0.2"
 smallvec = "1"
 rand = "0.8"
 
-# memberlist-types = { version = "0.2", path = "../memberlist/types", default-features = false }
-# memberlist-core = { version = "0.2", path = "../memberlist/core", default-features = false }
-# memberlist = { version = "0.2", path = "../memberlist/memberlist", default-features = false }
+memberlist-types = { version = "0.2", path = "../memberlist/types" }
+memberlist-core = { version = "0.2", path = "../memberlist/core" }
+memberlist = { version = "0.2", path = "../memberlist/memberlist" }
 
 ruserf-core = { path = "core", version = "0.1.0", default-features = false }
 ruserf-types = { path = "types", version = "0.1.0", default-features = false }

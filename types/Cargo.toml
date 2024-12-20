@@ -10,8 +10,15 @@ description = "Types for the `ruserf` crate"
 
 [features]
 encryption = ["memberlist-types/encryption", "futures"]
-serde = ["dep:serde", "indexmap/serde", "memberlist-types/serde", "smol_str/serde", "bitflags/serde"]
+serde = [
+    "dep:serde",
+    "indexmap/serde",
+    "memberlist-types/serde",
+    "smol_str/serde",
+    "bitflags/serde",
+]
 metrics = ["memberlist-types/metrics"]
+rkyv = []
 
 [dependencies]
 bitflags = "2"
@@ -22,7 +29,9 @@ futures = { workspace = true, optional = true, features = ["alloc"] }
 indexmap.workspace = true
 memberlist-types.workspace = true
 smol_str.workspace = true
-transformable = { version = "0.1", features = ["async"] }
+transformable = { version = "0.1", path = "../../transformable", features = [
+    "async",
+] }
 thiserror.workspace = true
 viewit.workspace = true
 
